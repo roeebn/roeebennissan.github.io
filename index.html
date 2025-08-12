@@ -106,9 +106,16 @@
 
     /* If a browser is cropping oddly, this keeps images centered nicely */
     .photo-card img { object-position: center; }
-    .field-photo {
-    object-position: 50% 42%; /* 50% horizontal = center, adjust vertical % until perfect */
-    }
+    /* keep consistent look */
+.photo { width:100%; height:360px; object-fit:cover; display:block; }
+
+/* match the old crop: nudge focus right and a bit up */
+.field-photo { object-position: 68% 38%; }
+
+/* optional: small tweak on narrow screens */
+@media (max-width: 520px) {
+  .field-photo { object-position: 65% 40%; }
+}
   </style>
 </head>
 <body>
@@ -150,7 +157,7 @@
     <div class="container">
       <div class="photo-grid">
         <figure class="photo-card">
-          <img src="roee-field.jpg" alt="Roee during fieldwork" loading="lazy" class="field-photo">
+          <img src="roee-field.jpg" alt="Roee during fieldwork" class="photo field-photo">
           <figcaption>Amphibian survey in the local vernal pool</figcaption>
         </figure>
         <figure class="photo-card">
