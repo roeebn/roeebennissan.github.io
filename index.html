@@ -97,6 +97,16 @@
     .contact-list strong{color:#2f2f2f}
     .contact-list a{color:var(--accent);font-weight:500;border-bottom:1px solid transparent}
     .contact-list a:hover{border-bottom-color:currentColor}
+    /* Tidy contact links; ensure nothing gets clipped */
+    .contact-list a { display: inline; padding: 0 0.5px; border-bottom: 1px solid transparent; }
+    .contact-list a:hover { border-bottom-color: currentColor; }
+
+    /* Photos: keep rounded corners consistent with cards */
+    .photo-card { border-radius: var(--radius); }
+
+    /* If a browser is cropping oddly, this keeps images centered nicely */
+    .photo-card img { object-position: center; }
+
   </style>
 </head>
 <body>
@@ -128,8 +138,7 @@
     <div class="container">
       <h2>About me</h2>
       <div class="card">
-        <p>I am an environmental biology researcher working across scales. My current postdoctoral work in the labs of Prof. Uri Roll and Prof. Ron Milo investigates how sea-level rise will affect global tetrapod biodiversity. I use geospatial data, coastal DEMs, and climate projections to quantify risk and inform action.</p>
-        <p>During my MSc and PhD at the Weizmann Institute of Science I engineered <em>E. coli</em> for synthetic CO<sub>2</sub> fixation. I later collaborated with the International Institute for Applied Systems Analysis (IIASA) to assess how microbial protein adoption could reduce land-use emissions and support biodiversity.</p>
+        <p>I am an environmental biology researcher tackling sustainability challenges from microbial metabolism to global ecosystems. My work spans synthetic biology, climate impact modelling, and biodiversity conservation, with projects ranging from engineering bacteria for nature-based solutions to global analyses of food systems and biodiversity. Beyond research, I am committed to education, outreach, and policy, working to inspire and equip the next generation of environmental stewards.</p>
       </div>
     </div>
   </section>
@@ -140,11 +149,11 @@
       <div class="photo-grid">
         <figure class="photo-card">
           <img src="roee-field.jpg" alt="Roee during fieldwork" loading="lazy">
-          <figcaption>Fieldwork</figcaption>
+          <figcaption>Amphibian survey in the local vernal pool</figcaption>
         </figure>
         <figure class="photo-card">
           <img src="roee-lab.jpg" alt="Roee in the lab" loading="lazy">
-          <figcaption>Lab</figcaption>
+          <figcaption>Engineering microbial systems in the lab</figcaption>
         </figure>
       </div>
     </div>
@@ -157,15 +166,15 @@
       <div class="grid cols-3">
         <div class="card box-gray">
           <h3>Synthetic Biology and Metabolic Engineering</h3>
-          <p>I apply synthetic biology tools to engineer microbes for sustainable applications, focusing on the production of value-added goods and on processes that reduce environmental impact. My work includes designing and optimizing metabolic pathways, enhancing microbial efficiency, and creating systems capable of utilizing alternative carbon sources. Through molecular biology, metabolic engineering, and computational modelling, I aim to develop microbial solutions that support a more sustainable and resilient future.</p>
+          <p>Through molecular biology, metabolic engineering, and computational modelling, I aim to develop microbial solutions that support a more sustainable and resilient future. I apply synthetic biology tools to engineer microbes for sustainable applications, focusing on the production of value-added goods and on processes that reduce environmental impact. My work includes designing and optimizing metabolic pathways, enhancing microbial efficiency, and creating systems capable of utilizing alternative carbon sources. </p>
         </div>
         <div class="card box-gray">
           <h3>Food Systems & Microbial Protein</h3>
-          <p>In collaboration with the International Institute for Applied Systems Analysis (IIASA), we assess the climate mitigation potential of microbial protein as a sustainable alternative to beef and dairy production. Microbial protein can be produced without fertile soil, uses fewer natural resources, and reduces pressure on land, biodiversity, and water systems. Its adaptability, high nutritional value, and potential for local production make it a promising solution for improving global food security while lowering environmental impacts.</p>
+          <p>Microbial protein can be produced without fertile soil, uses fewer natural resources, and reduces pressure on land, biodiversity, and water systems. Its adaptability, high nutritional value, and potential for local production make it a promising solution for improving global food security while lowering environmental impacts. Together with the International Institute for Applied Systems Analysis (IIASA), I assess the climate mitigation potential of microbial protein as a sustainable alternative to beef and dairy production. </p>
         </div>
         <div class="card box-gray">
           <h3>Biodiversity Conservation under Climate Change</h3>
-          <p>I investigate how climate-driven sea-level rise will reshape the ranges and survival prospects of terrestrial vertebrates worldwide. By integrating high-resolution coastal elevation models, global species distribution data, and climate projections, my work identifies the species and regions most at risk. These insights inform conservation strategies that aim to preserve biodiversity, maintain ecosystem services, and prioritize areas for habitat protection and restoration in a rapidly changing world.</p>
+          <p>Our world is rapidly changing, and .I investigate how climate-driven sea-level rise will reshape the ranges and survival prospects of terrestrial vertebrates worldwide. By integrating high-resolution coastal elevation models, global species distribution data, and climate projections, my work identifies the species and regions most at risk. These insights inform conservation strategies that aim to preserve biodiversity, maintain ecosystem services, and prioritize areas for habitat protection and restoration.</p>
         </div>
       </div>
     </div>
@@ -239,11 +248,12 @@
             </a>
           </li>
           <li>
-            📚 <strong>Google Scholar:</strong>
-            <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn--outline small-btn">
-              View profile
-            </a>
-          </li>
+          📚 <strong>Google Scholar:</strong>
+          <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">
+            scholar.google.com/citations?user=_VWn8hcAAAAJ
+          </a>
+        </li>
+
         </ul>
       </div>
     </div>
