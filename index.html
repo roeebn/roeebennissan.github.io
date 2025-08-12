@@ -71,7 +71,6 @@
     .photo-card{margin:0;background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
     .photo-card img{width:100%;height:360px;object-fit:cover;display:block}
     .photo-card figcaption{padding:10px 12px;color:var(--muted);font-size:14px}
-    .photo-card img.focus-right {object-position: 70% center;}
       /* Base (kept) */
       .photo-card img {
         width: 100%;
@@ -117,6 +116,23 @@
     /* Tidy contact links; ensure nothing gets clipped */
     .contact-list a { display: inline; padding: 0 0.5px; border-bottom: 1px solid transparent; }
     .contact-list a:hover { border-bottom-color: currentColor; }
+/* Base, keep once (remove any duplicate above if present) */
+.photo-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Field-only crop: push focus right and slightly up */
+.photo-card img.field-photo {
+  object-position: 78% 42% !important; /* try 76–82% / 40–45% */
+}
+
+/* Optional tweak for phones */
+@media (max-width: 520px) {
+  .photo-card img.field-photo { object-position: 75% 44% !important; }
+}
 
   </style>
 </head>
@@ -149,7 +165,9 @@
     <div class="container">
       <h2>About me</h2>
       <div class="card">
-        <p>I am an environmental biology researcher tackling sustainability challenges from microbial metabolism to global ecosystems. My work spans synthetic biology, climate impact modelling, and biodiversity conservation, with projects ranging from engineering bacteria for nature-based solutions to global analyses of food systems and biodiversity. </p> </p>Beyond research, I am committed to education, outreach, and policy, working to inspire and equip the next generation of environmental stewards.</p>
+<p>I am an environmental biology researcher tackling sustainability challenges from microbial metabolism to global ecosystems. My work spans synthetic biology, climate impact modelling, and biodiversity conservation, with projects ranging from engineering bacteria for nature-based solutions to global analyses of food systems and biodiversity.</p>
+
+<p>Beyond research, I am committed to education, outreach, and policy, working to inspire and equip the next generation of environmental stewards.</p>
       </div>
     </div>
   </section>
@@ -159,7 +177,8 @@
     <div class="container">
       <div class="photo-grid">
         <figure class="photo-card">
-          <img src="roee-field.jpg" alt="Roee during fieldwork" class="photo field-photo">
+<img src="roee-field.jpg" class="photo field-photo"
+     style="object-position:78% 42% !important;" alt="Roee during fieldwork">
           <figcaption>Amphibian survey in the local vernal pool</figcaption>
         </figure>
         <figure class="photo-card">
