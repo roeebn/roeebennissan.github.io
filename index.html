@@ -35,15 +35,6 @@
     .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:var(--highlight);color:#fff;font-size:12px;margin-right:6px;margin-top:6px}
     .muted{color:var(--muted)}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
-    .btn-small {
-        padding: 6px 10px;
-        font-size: 13px;
-        border-radius: 8px;
-      }
-      nav ul li {
-        display: flex;
-        align-items: center;
-      }
     .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin-right:10px;margin-top:10px}
     .btn:hover{filter:brightness(.95)}
     /* photos strip */
@@ -65,37 +56,74 @@
     .pub-item{border:1px solid var(--border);background:#fff;border-radius:12px;padding:16px;margin-bottom:12px}
     .pub-title{font-weight:700;font-size:18px;margin:0 0 6px}
     .badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--border);background:var(--soft);color:#374151;font-size:12px;margin-left:8px}
-  </style>
+    .contact-card {
+      background: var(--soft);
+      border: 1px solid var(--border);
+    }
+
+    .contact-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .contact-list a {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+.brand-with-cv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn.small-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+</style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <nav aria-label="Primary">
-        <div class="brand">Roee Ben-Nissan</div>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li>
-           <li>
-            <a href="Roee_Ben_Nissan_CV.pdf" class="btn btn-small" target="_blank" rel="noopener">
-              CV
-            </a>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Environmental Biology Researcher</h1>
-        <p class="tagline">From micro to macro: engineering microbial metabolism and modelling biodiversity under climate change.</p>
-        <p class="meta">Postdoctoral Researcher — Ben-Gurion University of the Negev • Weizmann Institute of Science</p>
-        <div>
+  <div class="container">
+    <nav aria-label="Primary">
+      <div class="brand-with-cv">
+        <span class="brand">Roee Ben-Nissan</span>
+        <a href="cv.pdf" class="btn small-btn" target="_blank" rel="noopener">CV</a>
       </div>
-    </section>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Environmental Biology Researcher</h1>
+    <p class="tagline">From micro to macro: engineering microbial metabolism and modelling biodiversity under climate change.</p>
+    <p class="meta">Postdoctoral Researcher — Ben-Gurion University of the Negev • Weizmann Institute of Science</p>
+  </div>
+</section>
+
  <!-- About -->
     <section id="about">
       <div class="container">
@@ -163,7 +191,7 @@
           </a>
           <span class="badge">eLife</span><span class="badge">2024</span>
         </div>
-        <div class="muted">Roee Ben Nissan; Eliya Milshtein; Vanessa Pahl; Benoit de Pins; Ghil Jona; Dikla Levi; Hadas Yung; Noga Nir; Dolev Ezra; Shmuel Gleizer; Hannes Link; Elad Noor; Ron Milo.</div>
+        <div class="muted">Roee Ben Nissan*; Eliya Milshtein*; Vanessa Pahl; Benoit de Pins; Ghil Jona; Dikla Levi; Hadas Yung; Noga Nir; Dolev Ezra; Shmuel Gleizer; Hannes Link; Elad Noor; Ron Milo.</div>
       </li>
 
       <li class="pub-item">
@@ -190,29 +218,35 @@
   </div>
 </section>
 
- <!-- Contact -->
+<!-- Contact -->
 <section id="contact">
   <div class="container">
     <h2>Contact</h2>
-    <div class="card">
-      <p>Email: 
-        <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a> | 
-        <a href="mailto:roeebenn@post.bgu.ac.il" class="mono">roeebenn@post.bgu.ac.il</a> | 
-        <a href="mailto:roee.bennissan@weizmann.ac.il" class="mono">roee.bennissan@weizmann.ac.il</a>
-      </p>
-      <p>LinkedIn: 
-        <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener">
-          linkedin.com/in/roee-ben-nissan-496895172
-        </a>
-      </p>
-      <p>Google Scholar: 
-        <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">
-          scholar.google.com/citations?user=_VWn8hcAAAAJ
-        </a>
-      </p>
+    <div class="card contact-card">
+      <ul class="contact-list">
+        <li>
+          📧 <strong>Email:</strong> 
+          <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a> | 
+          <a href="mailto:roeebenn@post.bgu.ac.il" class="mono">roeebenn@post.bgu.ac.il</a> | 
+          <a href="mailto:roee.bennissan@weizmann.ac.il" class="mono">roee.bennissan@weizmann.ac.il</a>
+        </li>
+        <li>
+          💼 <strong>LinkedIn:</strong> 
+          <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener">
+            linkedin.com/in/roee-ben-nissan-496895172
+          </a>
+        </li>
+        <li>
+          📚 <strong>Google Scholar:</strong> 
+          <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">
+            scholar.google.com/citations?user=_VWn8hcAAAAJ
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
+
 
   </main>
 
