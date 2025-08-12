@@ -106,6 +106,12 @@
 
     /* If a browser is cropping oddly, this keeps images centered nicely */
     .photo-card img { object-position: center; }
+    .field-photo {
+      width: 100%;
+      height: 500px; /* adjust to desired height */
+      object-fit: cover;
+      object-position: center; /* centers you in the frame */
+    }
 
   </style>
 </head>
@@ -128,7 +134,7 @@
   <section class="hero">
     <div class="container">
       <h1>Environmental Biology Researcher</h1>
-      <p class="tagline">From micro to macro: engineering microbial metabolism and modelling biodiversity under climate change.</p>
+      <p class="tagline">From Micro to Macro: Engineering nature-based microbial solutions and informing global climate action.</p>
       <p class="meta">Postdoctoral Researcher — Ben-Gurion University of the Negev • Weizmann Institute of Science</p>
     </div>
   </section>
@@ -148,7 +154,7 @@
     <div class="container">
       <div class="photo-grid">
         <figure class="photo-card">
-          <img src="roee-field.jpg" alt="Roee during fieldwork" loading="lazy" class="focus-right">
+          <img src="roee-field.jpg" alt="Roee during fieldwork" loading="lazy" class="field-photo">
           <figcaption>Amphibian survey in the local vernal pool</figcaption>
         </figure>
         <figure class="photo-card">
