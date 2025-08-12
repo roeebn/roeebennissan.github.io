@@ -1,57 +1,204 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roee Ben Nissan - Research</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; }
-        header { background-color: #333; color: #fff; padding: 20px; text-align: center; }
-        h1 { margin: 0; }
-        section { padding: 20px; }
-        .publication { background: #fff; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
-        .publication h3 { margin: 0 0 5px; }
-        .badge { background-color: #eee; border-radius: 5px; padding: 3px 8px; font-size: 12px; margin-left: 5px; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roee Ben-Nissan | Environmental Biology</title>
+  <meta name="description" content="Roee Ben-Nissan — environmental biology researcher working from micro to macro: synthetic CO2 fixation, biodiversity and sea-level rise, and sustainable food systems." />
+  <style>
+    :root{
+      --bg:#f9f8f4; --text:#3e3e3e; --muted:#6b705c; --accent:#4a7856;
+      --highlight:#8caebd; --soft:#eef2ee; --card:#ffffff; --border:#dcd8cf;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:980px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:10;background:rgba(249,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    nav .brand{font-weight:700;letter-spacing:.2px;color:var(--accent)}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .hero{padding:64px 0 40px}
+    .hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 10px;color:var(--accent)}
+    .tagline{color:var(--muted);font-size:clamp(16px,2vw,18px)}
+    .meta{margin-top:12px;color:var(--muted);font-size:15px}
+    section{padding:36px 0;border-top:1px solid var(--border)}
+    section h2{font-size:22px;margin:0 0 18px;color:var(--accent)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:800px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+    .list{margin:0;padding-left:18px}
+    .list li{margin-bottom:10px}
+    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:var(--highlight);color:#fff;font-size:12px;margin-right:6px;margin-top:6px}
+    .muted{color:var(--muted)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin-right:10px;margin-top:10px}
+    .btn:hover{filter:brightness(.95)}
+    /* photos strip */
+    .photo-grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media (min-width:800px){.photo-grid{grid-template-columns:1fr 1fr}}
+    .photo-card{margin:0;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+    .photo-card img{width:100%;height:320px;object-fit:cover;display:block}
+    .photo-card figcaption{padding:10px 12px;color:var(--muted);font-size:14px}
+    /* gray boxes */
+    .box-gray{background:#eaeaea;border-color:#ddd}
+    .box-gray h3{margin-top:0;color:#2f2f2f}
+    /* publications */
+    .pub-list{list-style:none;padding:0;margin:0}
+    .pub-item{border:1px solid var(--border);background:#fff;border-radius:12px;padding:16px;margin-bottom:12px}
+    .pub-title{font-weight:700;font-size:18px;margin:0 0 6px}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--border);background:var(--soft);color:#374151;font-size:12px;margin-left:8px}
+  </style>
 </head>
 <body>
-<header>
-    <h1>Research</h1>
-</header>
-
-<section>
-    <h2>Selected Publications</h2>
-
-    <div class="publication">
-        <h3>
-            <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank">
-                Conversion of Escherichia coli to generate all biomass carbon from CO2
-            </a>
-            <span class="badge">Cell</span><span class="badge">2019</span>
-        </h3>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">Roee Ben-Nissan</div>
+        <ul>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#focus">Focus</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="publication">
-        <h3>
-            <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank">
-                Autotrophic growth of Escherichia coli
-            </a>
-            <span class="badge">eLife</span><span class="badge">2024</span>
-        </h3>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Environmental Biology Researcher</h1>
+        <p class="tagline">From micro to macro: engineering microbial metabolism and modelling biodiversity under climate change.</p>
+        <p class="meta">Postdoctoral Researcher — Weizmann Institute of Science • Ben-Gurion University of the Negev</p>
+        <p class="meta">Email: <a href="mailto:roeebn@gmail.com">roeebn@gmail.com</a> • <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener">LinkedIn</a> • <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></p>
+        <div>
+          <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" class="btn" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="cv.pdf" class="btn" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photos strip -->
+    <section id="photos">
+      <div class="container">
+        <div class="photo-grid">
+          <figure class="photo-card">
+            <img src="roee-field.jpg" alt="Roee during fieldwork">
+            <figcaption>Fieldwork</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="roee-lab.jpg" alt="Roee in the lab">
+            <figcaption>Lab</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section id="research">
+      <div class="container">
+        <h2>Research</h2>
+        <div class="grid cols-2">
+          <div class="card">
+            <h3>Sea-level rise and tetrapod biodiversity</h3>
+            <p>I study how future sea-level rise will reshape ranges and risks for land tetrapods worldwide. I combine large-scale geospatial analysis, species distribution modelling, and climate projections to quantify exposure and guide conservation priority setting.</p>
+          </div>
+          <div class="card">
+            <h3>Sustainable systems</h3>
+            <p>Linking molecular innovation to planetary-scale outcomes through collaborations on food systems, climate mitigation, and biodiversity conservation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus areas -->
+    <section id="focus">
+      <div class="container">
+        <h2>Focus areas</h2>
+        <div class="grid cols-2">
+          <div class="card box-gray">
+            <h3>Food Systems & Microbial Protein</h3>
+            <p>In collaboration with the International Institute for Applied Systems Analysis (IIASA), we assess the climate mitigation potential of microbial protein as a sustainable alternative to beef and dairy production. Microbial protein can be produced without fertile soil, uses fewer natural resources, and reduces pressure on land, biodiversity, and water systems. Its adaptability, high nutritional value, and potential for local production make it a promising solution for improving global food security while lowering environmental impacts.</p>
+          </div>
+          <div class="card box-gray">
+            <h3>Synthetic Biology</h3>
+            <p>I apply synthetic biology to engineer microbes for sustainable applications, focusing on the production of value-added goods and on processes that reduce environmental impact. My work includes designing and optimizing metabolic pathways, enhancing microbial efficiency, and creating systems capable of utilizing alternative carbon sources. Through molecular biology, metabolic engineering, and computational modelling, I aim to develop microbial solutions that support a more sustainable and resilient future.</p>
+          </div>
+          <div class="card box-gray">
+            <h3>Climate–Biodiversity</h3>
+            <p>Sea-level rise exposure of tetrapods using geospatial analysis, species distribution models, and coastal DEM harmonization to guide conservation priorities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <div class="container">
+        <h2>Selected publications</h2>
+        <ul class="pub-list">
+          <li class="pub-item">
+            <div class="pub-title">
+              <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">
+                Conversion of <em>Escherichia coli</em> to generate all biomass carbon from CO₂
+              </a>
+              <span class="badge">Cell</span><span class="badge">2019</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">
+              <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank" rel="noopener">
+                Autotrophic growth of <em>Escherichia coli</em> is achieved by a small number of genetic changes
+              </a>
+              <span class="badge">eLife</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">
+              <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank" rel="noopener">
+                Electro-microbial production: techno-economic viability and environmental implications
+              </a>
+              <span class="badge">Nature Biotechnology</span><span class="badge">2025</span>
+            </div>
+          </li>
+        </ul>
+        <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2>About me</h2>
+        <div class="card">
+          <p>I am an environmental biology researcher working across scales. My current postdoctoral work in the labs of Uri Roll and Ron Milo investigates how sea-level rise will affect global tetrapod biodiversity. I use geospatial data, coastal DEMs, and climate projections to quantify risk and inform action.</p>
+          <p>During my MSc and PhD at the Weizmann Institute of Science I engineered <em>E. coli</em> for synthetic CO<sub>2</sub> fixation. I later collaborated with the International Institute for Applied Systems Analysis (IIASA) to assess how microbial protein adoption could reduce land-use emissions and support biodiversity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card">
+          <p>Email: <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener">linkedin.com/in/roee-ben-nissan-496895172</a></p>
+          <p>Google Scholar: <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">scholar profile</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© 2025 Roee Ben-Nissan</div>
     </div>
-
-    <div class="publication">
-        <h3>
-            <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank">
-                Electro-microbial production techno-economic viability and environmental implications
-            </a>
-            <span class="badge">Nature Biotechnology</span><span class="badge">2025</span>
-        </h3>
-    </div>
-
-</section>
+  </footer>
 </body>
 </html>
