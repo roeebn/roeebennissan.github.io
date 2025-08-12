@@ -35,6 +35,15 @@
     .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:var(--highlight);color:#fff;font-size:12px;margin-right:6px;margin-top:6px}
     .muted{color:var(--muted)}
     .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .btn-small {
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 8px;
+      }
+      nav ul li {
+        display: flex;
+        align-items: center;
+      }
     .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin-right:10px;margin-top:10px}
     .btn:hover{filter:brightness(.95)}
     /* photos strip */
@@ -64,9 +73,14 @@
       <nav aria-label="Primary">
         <div class="brand">Roee Ben-Nissan</div>
         <ul>
+          <li><a href="#about">About</a></li>
           <li><a href="#research">Research</a></li>
           <li><a href="#publications">Publications</a></li>
-          <li><a href="#about">About</a></li>
+           <li>
+            <a href="Roee_Ben_Nissan_CV.pdf" class="btn btn-small" target="_blank" rel="noopener">
+              CV
+            </a>
+          </li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -80,9 +94,6 @@
         <p class="tagline">From micro to macro: engineering microbial metabolism and modelling biodiversity under climate change.</p>
         <p class="meta">Postdoctoral Researcher — Ben-Gurion University of the Negev • Weizmann Institute of Science</p>
         <div>
-          <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" class="btn" target="_blank" rel="noopener">Google Scholar</a>
-          <a href="Roee_Ben_Nissan_CV.pdf" class="btn" target="_blank" rel="noopener">Download CV</a>
-        </div>
       </div>
     </section>
  <!-- About -->
@@ -90,7 +101,7 @@
       <div class="container">
         <h2>About me</h2>
         <div class="card">
-          <p>I am an environmental biology researcher working across scales. My current postdoctoral work in the labs of Uri Roll and Ron Milo investigates how sea-level rise will affect global tetrapod biodiversity. I use geospatial data, coastal DEMs, and climate projections to quantify risk and inform action.</p>
+          <p>I am an environmental biology researcher working across scales. My current postdoctoral work in the labs of Prof. Uri Roll and Prof. Ron Milo investigates how sea-level rise will affect global tetrapod biodiversity. I use geospatial data, coastal DEMs, and climate projections to quantify risk and inform action.</p>
           <p>During my MSc and PhD at the Weizmann Institute of Science I engineered <em>E. coli</em> for synthetic CO<sub>2</sub> fixation. I later collaborated with the International Institute for Applied Systems Analysis (IIASA) to assess how microbial protein adoption could reduce land-use emissions and support biodiversity.</p>
         </div>
       </div>
@@ -131,53 +142,78 @@
 </section>
 
     <!-- Publications -->
-    <section id="publications">
-      <div class="container">
-        <h2>Selected publications</h2>
-        <ul class="pub-list">
-          <li class="pub-item">
-            <div class="pub-title">
-              <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">
-                Conversion of <em>Escherichia coli</em> to generate all biomass carbon from CO₂
-              </a>
-              <span class="badge">Cell</span><span class="badge">2019</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <div class="pub-title">
-              <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank" rel="noopener">
-                Autotrophic growth of <em>Escherichia coli</em> is achieved by a small number of genetic changes
-              </a>
-              <span class="badge">eLife</span><span class="badge">2024</span>
-            </div>
-          </li>
-          <li class="pub-item">
-            <div class="pub-title">
-              <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank" rel="noopener">
-                Electro-microbial production: techno-economic viability and environmental implications
-              </a>
-              <span class="badge">Nature Biotechnology</span><span class="badge">2025</span>
-            </div>
-          </li>
-        </ul>
-        <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="card">
-          <p>Email: 
-            <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a> | 
-            <a href="mailto:roeebenn@post.bgu.ac.il" class="mono">roeebenn@post.bgu.ac.il</a> | 
-            <a href="mailto:roee.bennissan@weizmann.ac.il" class="mono">roee.bennissan@weizmann.ac.il</a>
-          </p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" class="mono" rel="noopener"> linkedin.com/in/roee-ben-nissan-496895172</a></p>
+<section id="publications">
+  <div class="container">
+    <h2>Selected publications</h2>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <div class="pub-title">
+          <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">
+            Conversion of <em>Escherichia coli</em> to generate all biomass carbon from CO₂
+          </a>
+          <span class="badge">Cell</span><span class="badge">2019</span>
         </div>
-      </div>
-    </section>
+        <div class="muted">Shmuel Gleizer; Roee Ben-Nissan; Yinon M. Bar-On; Niv Antonovsky; Elad Noor; Yehudit Zohar; Ghil Jona; Eyal Krieger; Melina Shamshoum; Arren Bar-Even; Ron Milo.</div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank" rel="noopener">
+            Autotrophic growth of <em>Escherichia coli</em> is achieved by a small number of genetic changes
+          </a>
+          <span class="badge">eLife</span><span class="badge">2024</span>
+        </div>
+        <div class="muted">Roee Ben Nissan; Eliya Milshtein; Vanessa Pahl; Benoit de Pins; Ghil Jona; Dikla Levi; Hadas Yung; Noga Nir; Dolev Ezra; Shmuel Gleizer; Hannes Link; Elad Noor; Ron Milo.</div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank" rel="noopener">
+            Electro-microbial production: techno-economic viability and environmental implications
+          </a>
+          <span class="badge">Nature Biotechnology</span><span class="badge">2025</span>
+        </div>
+        <div class="muted">Samuel J. Lovat; Roee Ben-Nissan; Eliya Milshtein; Asaf Tzachor; Avi Flamholz; Dorian Leger; Elad Noor; Ron Milo.</div>
+      </li>
+
+      <li class="pub-item">
+        <div class="pub-title">
+          <a href="https://doi.org/10.1525/abt.2025.87.1.20" target="_blank" rel="noopener">
+            The Importance of Sharing Current Scientific Information with Biology Teachers in Weekly Newsletters
+          </a>
+          <span class="badge">American Biology Teacher</span><span class="badge">2025</span>
+        </div>
+        <div class="muted">Merav Siani; Ohad Levkovich; Roee Ben Nissan; Awni Gabara; Moshera Alatawna; Anat Yarden.</div>
+      </li>
+    </ul>
+    <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+  </div>
+</section>
+
+ <!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: 
+        <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a> | 
+        <a href="mailto:roeebenn@post.bgu.ac.il" class="mono">roeebenn@post.bgu.ac.il</a> | 
+        <a href="mailto:roee.bennissan@weizmann.ac.il" class="mono">roee.bennissan@weizmann.ac.il</a>
+      </p>
+      <p>LinkedIn: 
+        <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener">
+          linkedin.com/in/roee-ben-nissan-496895172
+        </a>
+      </p>
+      <p>Google Scholar: 
+        <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">
+          scholar.google.com/citations?user=_VWn8hcAAAAJ
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <footer>
