@@ -3,15 +3,339 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roee Ben Nissan</title>
+  <title>Roee Ben Nissan| Environmental Biology</title>
   <!-- Earth emoji favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Other sections unchanged -->
+  <!-- Open Graph for nicer link previews -->
+  <meta property="og:title" content="Roee Ben-Nissan | Environmental Biology">
+  <meta property="og:description" content="From Micro to Macro: Engineering microbial solutions and informing global climate action.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="roee-field.jpg">
+  <link rel="icon" href="roee-field.jpg">
 
-  <!-- Publications -->
+  <style>
+    :root{
+      --bg:#f9f8f4; --text:#3e3e3e; --muted:#5b6353; --accent:#4a7856;
+      --highlight:#8caebd; --soft:#eef2ee; --card:#ffffff; --border:#dcd8cf;
+      --h1: clamp(30px, 4vw, 44px); --h2: 24px; --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    html{scroll-behavior:smooth}
+    :target{scroll-margin-top:80px}
+
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .container{max-width:980px;margin:0 auto;padding:0 20px}
+
+    header{position:sticky;top:0;z-index:10;background:rgba(249,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    nav .brand{font-weight:700;letter-spacing:.2px;color:var(--accent);font-size:1.6rem;line-height:1.2}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav ul a{padding:6px 0}
+
+    .hero{padding:64px 0 40px}
+    .hero h1{font-size:var(--h1);letter-spacing:.2px;margin:0 0 10px;color:var(--accent)}
+    .tagline{color:var(--muted);font-size:clamp(16px,2vw,18px)}
+    .meta{margin-top:12px;color:var(--muted);font-size:15px}
+
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    section h2{font-size:var(--h2);margin:0 0 18px;color:var(--accent)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:800px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;
+      box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .12s ease, box-shadow .12s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+
+    .list{margin:0;padding-left:18px}
+    .list li{margin-bottom:10px}
+
+    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:var(--highlight);color:#fff;font-size:12px;margin-right:6px;margin-top:6px}
+    .muted{color:var(--muted)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin-right:10px;margin-top:10px}
+    .btn:hover{filter:brightness(.95)}
+    .btn.small-btn{padding:6px 14px;font-size:.92rem;line-height:1.2;border-radius:10px}
+    .btn--outline{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+    .btn--outline:hover{filter:none;background:rgba(74,120,86,.06)}
+
+    /* photos strip */
+    .photo-grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media (min-width:800px){.photo-grid{grid-template-columns:1fr 1fr}}
+    .photo-card{margin:0;background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .photo-card img{width:100%;height:360px;object-fit:cover;display:block}
+    .photo-card figcaption{padding:10px 12px;color:var(--muted);font-size:14px}
+      /* Base (kept) */
+      .photo-card img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        display: block;
+      }
+      
+      /* Field-only centering — stronger selector and !important to beat earlier rules */
+      .photo-card img.field-photo {
+        object-position: 68% 38% !important;  /* horizontal, vertical */
+      }
+      
+      /* Optional: tweak on small screens */
+      @media (max-width: 520px) {
+        .photo-card img.field-photo { object-position: 65% 40% !important; }
+      }
+    /* gray boxes */
+    .box-gray{background:#ededeb;border-color:#d8d3c9}
+    .box-gray h3{margin-top:0;color:#2f2f2f}
+
+    /* 3-up grid for the research boxes */
+    .grid.cols-3 { grid-template-columns: 1fr; }
+    @media (min-width: 900px) {
+      .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* publications */
+    .pub-list{list-style:none;padding:0;margin:0}
+    .pub-item{border:1px solid var(--border);background:#fff;border-radius:var(--radius);padding:16px;margin-bottom:12px;transition:box-shadow .12s ease}
+    .pub-item:hover{box-shadow:0 4px 12px rgba(0,0,0,.06)}
+    .pub-title{font-weight:700;font-size:19px;margin:0 0 6px}
+    .pub-item a{display:inline-block}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #d6e1d6;background:#eef2ee;color:#2f3a2f;font-size:12px;margin-left:8px}
+    .pub-card {
+      display: flex;
+      gap: var(--s3);
+      align-items: flex-start;
+      margin-bottom: var(--s3);
+    }
+
+    .pub-card{ display:block }
+    .pub-thumb{ width:140px; height:100px; object-fit:cover; margin-bottom:10px }
+
+
+    /* contact aesthetics */
+    .contact-card{background:#f2f3f1;border:1px solid var(--border)}
+    .contact-list{list-style:none;margin:0;padding:0}
+    .contact-list li{margin-bottom:10px;font-size:15px}
+    .contact-list strong{color:#2f2f2f}
+    .contact-list a{color:var(--accent);font-weight:500;border-bottom:1px solid transparent}
+    .contact-list a:hover{border-bottom-color:currentColor}
+    /* Tidy contact links; ensure nothing gets clipped */
+    .contact-list a { display: inline; padding: 0 0.5px; border-bottom: 1px solid transparent; }
+    .contact-list a:hover { border-bottom-color: currentColor; }
+/* Base, keep once (remove any duplicate above if present) */
+.photo-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Field-only crop: push focus right and slightly up */
+.photo-card img.field-photo {
+  object-position: 78% 42% !important; /* try 76–82% / 40–45% */
+}
+
+/* Optional tweak for phones */
+@media (max-width: 520px) {
+  .photo-card img.field-photo { object-position: 75% 44% !important; }
+}
+.hero-name {
+  font-size: 18px;       /* smaller than title */
+  font-weight: 600;
+  color: var(--muted);   /* softer, secondary color */
+  margin: 0 0 4px;       /* tight spacing below */
+}
+
+.hero-title {
+  font-size: var(--h1);  /* main headline size */
+  font-weight: 700;
+  color: var(--accent);  /* your brand accent color */
+  margin: 0 0 var(--s2);
+}
+
+  
+  </style>
+</head>
+<script>
+/* Auto-fill publication thumbnails + abstracts
+   Requires a serverless endpoint at /api/paper-meta?doi=... (see worker below)
+*/
+(async () => {
+  const items = document.querySelectorAll('#publications .pub-item');
+  if (!items.length) return;
+
+  // Helper: extract DOI from the first link in the item
+  const getDOI = (li) => {
+    const a = li.querySelector('a[href]');
+    if (!a) return null;
+    const href = a.getAttribute('href');
+    // Try to pull DOI from common URL patterns
+    // 1) https://doi.org/<DOI>
+    let m = href.match(/doi\.org\/(10\.\d{4,9}\/[-._;()/:A-Z0-9]+)$/i);
+    if (m) return decodeURIComponent(m[1]);
+
+    // 2) Query param style (?doi=10.xxxx/...)
+    m = href.match(/doi=([^&]+)/i);
+    if (m) return decodeURIComponent(m[1]);
+
+    // 3) Fallback: common journal paths that end with DOI-like strings
+    m = href.match(/(10\.\d{4,9}\/[-._;()/:A-Z0-9]+)$/i);
+    return m ? decodeURIComponent(m[1]) : null;
+  };
+
+  // Ensure a thumbnail + details exist; return refs
+  const ensureUI = (li) => {
+    // Thumbnail
+    let thumbWrap = li.querySelector('.pub-thumbnail');
+    if (!thumbWrap) {
+      thumbWrap = document.createElement('div');
+      thumbWrap.className = 'pub-thumbnail';
+      // try to place it right after the title block if possible
+      const titleBlock = li.querySelector('.pub-title') || li.firstElementChild;
+      (titleBlock?.nextSibling ? titleBlock.parentNode.insertBefore(thumbWrap, titleBlock.nextSibling) 
+                               : li.appendChild(thumbWrap));
+    }
+    let img = thumbWrap.querySelector('img.pub-thumb');
+    if (!img) {
+      img = document.createElement('img');
+      img.className = 'pub-thumb';
+      img.setAttribute('alt', 'Publication figure');
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('width', '120');
+      img.setAttribute('height', '90');
+      thumbWrap.appendChild(img);
+    }
+
+    // Abstract
+    let details = li.querySelector('details.abstract');
+    if (!details) {
+      details = document.createElement('details');
+      details.className = 'abstract';
+      const summary = document.createElement('summary');
+      summary.textContent = 'Abstract';
+      const p = document.createElement('p');
+      p.className = 'abstract-text';
+      p.textContent = 'Loading…';
+      details.appendChild(summary);
+      details.appendChild(p);
+      li.appendChild(details);
+    }
+    const abstractP = details.querySelector('.abstract-text') || details.querySelector('p') || document.createElement('p');
+
+    return { img, abstractP };
+  };
+
+  for (const li of items) {
+    const doi = getDOI(li);
+    if (!doi) continue;
+
+    const { img, abstractP } = ensureUI(li);
+
+    try {
+      const resp = await fetch(`/api/paper-meta?doi=${encodeURIComponent(doi)}`);
+      if (!resp.ok) continue;
+      const { ogImage, abstract } = await resp.json();
+
+      if (ogImage && img) {
+        img.src = ogImage;
+        // Keep aspect nicely cropped if your CSS doesn't already
+        img.style.objectFit = img.style.objectFit || 'cover';
+      }
+      if (abstract && abstractP) {
+        abstractP.textContent = abstract;
+      }
+    } catch (e) {
+      // leave placeholders if anything fails
+    }
+  }
+})();
+</script>
+
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#focus">Research</a></li> <!-- fixed anchor -->
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="Roee_Ben_Nissan_CV.pdf" rel="noopener">CV</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <p class="hero-name">Roee Ben Nissan, PhD</p>
+      <h1 class="hero-title">Environmental Sustainability Researcher</h1>
+      <p class="tagline">From Micro to Macro: Engineering microbial solutions and informing global climate action.</p>
+<p class="meta">Postdoctoral Researcher —
+  <a href="http://uriroll.com" target="_blank" rel="noopener">Ben-Gurion University of the Negev</a> •
+  <a href="https://www.weizmann.ac.il/plants/Milo/" target="_blank" rel="noopener">Weizmann Institute of Science</a>.
+</p>
+    </div>
+  </section>
+  
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About me</h2>
+      <div class="card">
+<p>I am an environmental biology researcher tackling sustainability challenges from microbial metabolism to global ecosystems. My work spans synthetic biology, climate impact modelling, and biodiversity conservation, with projects ranging from engineering bacteria for nature-based solutions to global analyses of food systems and biodiversity.</p>
+
+<p>Beyond research, I am committed to education, outreach, and policy, working to inspire and equip the next generation of environmental stewards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section id="photos">
+    <div class="container">
+      <div class="photo-grid">
+        <figure class="photo-card">
+<img src="roee-field.jpg" class="photo field-photo"
+     style="object-position:78% 42% !important;" alt="Roee during fieldwork">
+          <figcaption>Amphibian survey in the local vernal pool</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="roee-lab.jpg" alt="Roee in the lab">
+          <figcaption>Engineering microbial systems in the lab</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="focus">
+    <div class="container">
+      <h2>Research</h2>
+      <div class="grid cols-3">
+        <div class="card box-gray">
+          <h3>Synthetic Biology and Metabolic Engineering</h3>
+          <p>Harnessing the hidden potential of microbes can transform how we produce, recycle, and sustain resources. I apply molecular biology tools, metabolic engineering, and computational modelling to design and optimize microbial systems for sustainable applications. My work focuses on creating pathways for value-added products, enhancing microbial efficiency, and enabling the use of alternative carbon sources - advancing nature-based technological solutions with real-world environmental impact. </p>
+        </div>
+        <div class="card box-gray">
+          <h3>Food Systems & Microbial Protein</h3>
+          <p>Microbial protein can be produced without fertile soil, uses fewer natural resources, and reduces pressure on land, biodiversity, and water systems. Its adaptability, high nutritional value, and potential for local production make it a promising solution for improving global food security while lowering environmental impacts. Together with the International Institute for Applied Systems Analysis (IIASA), I assess the climate mitigation potential of microbial protein as a sustainable alternative to beef and dairy production. </p>
+        </div>
+        <div class="card box-gray">
+          <h3>Biodiversity Conservation under Climate Change</h3>
+          <p>Our world is rapidly changing under the weight of the human footprint. Biodiversity is in steep decline, with species losing habitats faster than they can adapt. Using high-resolution geospatial tools, I quantify these changes by investigating how climate-driven global change will reshape the ranges and survival prospects of terrestrial vertebrates worldwide - providing science-based priorities for conservation and restoration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Publications -->
   <section id="publications">
     <div class="container">
       <h2>Selected publications</h2>
@@ -105,12 +429,30 @@
     </div>
   </section>
 
-  <!-- Affiliations (example in About section) -->
-  <section id="about">
+  <!-- Contact -->
+  <section id="contact">
     <div class="container">
-      <p>Postdoctoral Researcher at <a href="https://urilab.org" target="_blank">Ben-Gurion University (Uri Roll Lab)</a> and PhD at <a href="https://www.weizmann.ac.il/plants/Milo/" target="_blank">Weizmann Institute of Science (Milo Lab)</a>.</p>
+      <h2>Contact</h2>
+      <div class="card contact-card">
+        <ul class="contact-list">
+          <li>
+            📧 <strong>Email:</strong>
+            <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a> |
+            <a href="mailto:roeebenn@post.bgu.ac.il" class="mono">roeebenn@post.bgu.ac.il</a> |
+            <a href="mailto:roee.bennissan@weizmann.ac.il" class="mono">roee.bennissan@weizmann.ac.il</a>
+          </li>
+          <li>🔗 <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener" data-analytics="scholar_click">scholar profile</a></li>
+          <li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener" data-analytics="linkedin_click">linkedin profile</a></li>
+
+        </ul>
+      </div>
     </div>
   </section>
 
+  <footer>
+    <div class="container">
+      <div>© 2025 Roee Ben-Nissan</div>
+    </div>
+  </footer>
 </body>
 </html>
