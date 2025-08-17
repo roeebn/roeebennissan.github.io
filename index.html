@@ -1,272 +1,287 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Roee Ben-Nissan | Environmental Biology and Climate Resilience</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Environmental biology researcher focused on climate resilience. I engineer microbial systems and map biodiversity risk from sea level rise to inform conservation and sustainable food systems.">
-  <link rel="canonical" href="https://example.com/">
-  <!-- Open Graph / Twitter -->
-  <meta property="og:type" content="website">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roee Ben-Nissan | Environmental Biology</title>
+  <meta name="description" content="Roee Ben-Nissan — Environmental sustainability researcher working from micro to macro: synthetic CO2 fixation, biodiversity and sea-level rise, and sustainable food systems." />
+
+  <!-- Open Graph for nicer link previews -->
   <meta property="og:title" content="Roee Ben-Nissan | Environmental Biology">
-  <meta property="og:description" content="Microbes to ecosystems. Evidence that informs conservation and sustainable food.">
-  <meta property="og:image" content="images/roee-hero-field.jpg">
-  <meta property="og:url" content="https://example.com/">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:description" content="From Micro to Macro: Engineering microbial solutions and informing global climate action.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="roee-field.jpg">
+  <link rel="icon" href="roee-field.jpg">
 
   <style>
-    /* ===== Design tokens ===== */
     :root{
-      /* colors */
-      --bg:#f9f8f4; --text:#2f2f2f; --muted:#5b6353; --accent:#2b7a4b; --accent-2:#3e8fb0;
-      --surface:#ffffff; --border:#dcd8cf; --badge:#eef2ee;
-      /* spacing scale */
-      --s0:4px; --s1:8px; --s2:12px; --s3:16px; --s4:20px; --s5:28px; --s6:40px; --s7:64px;
-      /* typography */
-      --h1:clamp(28px,4.5vw,40px); --h2:clamp(20px,3vw,26px); --h3:18px; --body:16px; --small:14px;
-      /* radius and shadow */
-      --r:14px; --shadow:0 2px 10px rgba(0,0,0,.06);
-      /* content width */
-      --max:980px;
+      --bg:#f9f8f4; --text:#3e3e3e; --muted:#5b6353; --accent:#4a7856;
+      --highlight:#8caebd; --soft:#eef2ee; --card:#ffffff; --border:#dcd8cf;
+      --h1: clamp(30px, 4vw, 44px); --h2: 24px; --radius: 14px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
-    a{color:var(--accent);text-decoration:none}
-    a:focus-visible, button:focus-visible { outline:2px solid var(--accent-2); outline-offset:2px }
-    img{max-width:100%;display:block}
-    .container{max-width:var(--max);margin:0 auto;padding:0 var(--s3)}
-    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-    /* header */
-    header{position:sticky;top:0;z-index:50;background:rgba(249,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:var(--s3) 0}
-    .brand{font-weight:700;color:var(--accent)}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:var(--s3)}
-    nav a{padding:6px 4px}
-    /* hero */
-    #hero{padding:var(--s7) 0 var(--s6)}
-    #hero h1{margin:0 0 var(--s2);font-size:var(--h1);letter-spacing:.2px;color:var(--accent)}
-    #hero .sub{color:var(--muted);font-size:clamp(16px,2.5vw,18px)}
-    #hero .proof{margin-top:var(--s2);color:var(--muted);font-size:var(--small)}
-    .cta-row{margin-top:var(--s3);display:flex;gap:var(--s3);flex-wrap:wrap}
-    .btn{display:inline-block;border-radius:10px;border:1px solid var(--border);padding:10px 14px;font-weight:600}
-    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
-    .btn.outline{background:transparent;color:var(--accent)}
-    .btn:hover{filter:brightness(.97)}
-    /* trust bar */
-    #trust{padding:var(--s6) 0;border-top:1px solid var(--border)}
-    .trust-logos{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);align-items:center}
-    .trust-logos img{width:100%;height:34px;object-fit:contain;filter:grayscale(100%) contrast(1.1)}
-    .badge{display:inline-block;background:var(--badge);border:1px solid var(--border);border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px;color:#2f3a2f}
-    /* sections */
-    section{padding:var(--s6) 0;border-top:1px solid var(--border)}
-    h2{font-size:var(--h2);margin:0 0 var(--s3);color:var(--accent)}
-    .grid{display:grid;gap:var(--s3)}
-    .grid.cols-3{grid-template-columns:1fr}
-    @media(min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:var(--s4);box-shadow:var(--shadow)}
-    .muted{color:var(--muted)}
-    /* pubs */
-    .pub-list{list-style:none;margin:0;padding:0}
-    .pub-item{border:1px solid var(--border);border-radius:var(--r);padding:var(--s3);margin-bottom:var(--s3);background:#fff}
-    .pub-title{font-weight:700;margin:0 0 6px}
-    /* contact */
-    .contact-list{list-style:none;margin:0;padding:0}
-    .contact-list li{margin-bottom:10px}
-    /* footer */
-    footer{padding:var(--s6) 0;border-top:1px solid var(--border);color:var(--muted);font-size:var(--small)}
-    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;padding:8px 10px;border:1px solid var(--border);border-radius:8px}
-  </style>
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+      font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    html{scroll-behavior:smooth}
+    :target{scroll-margin-top:80px}
 
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Roee Ben-Nissan",
-    "jobTitle":"Environmental Biology Researcher",
-    "url":"https://example.com/",
-    "image":"https://example.com/images/roee-portrait.jpg",
-    "affiliation":[{"@type":"Organization","name":"Ben-Gurion University of the Negev"},{"@type":"Organization","name":"Weizmann Institute of Science"}],
-    "sameAs":[
-      "https://scholar.google.com/citations?user=_VWn8hcAAAAJ",
-      "https://www.linkedin.com/in/roee-ben-nissan-496895172"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},
-      {"@type":"ListItem","position":2,"name":"Research","item":"https://example.com/#research"},
-      {"@type":"ListItem","position":3,"name":"Publications","item":"https://example.com/#publications"}
-    ]
-  }
-  </script>
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .container{max-width:980px;margin:0 auto;padding:0 20px}
+
+    header{position:sticky;top:0;z-index:10;background:rgba(249,248,244,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    nav .brand{font-weight:700;letter-spacing:.2px;color:var(--accent);font-size:1.6rem;line-height:1.2}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav ul a{padding:6px 0}
+
+    .hero{padding:64px 0 40px}
+    .hero h1{font-size:var(--h1);letter-spacing:.2px;margin:0 0 10px;color:var(--accent)}
+    .tagline{color:var(--muted);font-size:clamp(16px,2vw,18px)}
+    .meta{margin-top:12px;color:var(--muted);font-size:15px}
+
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    section h2{font-size:var(--h2);margin:0 0 18px;color:var(--accent)}
+    .grid{display:grid;gap:16px}
+    @media (min-width:800px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;
+      box-shadow:0 1px 2px rgba(0,0,0,.04);transition:transform .12s ease, box-shadow .12s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.08)}
+
+    .list{margin:0;padding-left:18px}
+    .list li{margin-bottom:10px}
+
+    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;background:var(--highlight);color:#fff;font-size:12px;margin-right:6px;margin-top:6px}
+    .muted{color:var(--muted)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin-right:10px;margin-top:10px}
+    .btn:hover{filter:brightness(.95)}
+    .btn.small-btn{padding:6px 14px;font-size:.92rem;line-height:1.2;border-radius:10px}
+    .btn--outline{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+    .btn--outline:hover{filter:none;background:rgba(74,120,86,.06)}
+
+    /* photos strip */
+    .photo-grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media (min-width:800px){.photo-grid{grid-template-columns:1fr 1fr}}
+    .photo-card{margin:0;background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+    .photo-card img{width:100%;height:360px;object-fit:cover;display:block}
+    .photo-card figcaption{padding:10px 12px;color:var(--muted);font-size:14px}
+      /* Base (kept) */
+      .photo-card img {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+        display: block;
+      }
+      
+      /* Field-only centering — stronger selector and !important to beat earlier rules */
+      .photo-card img.field-photo {
+        object-position: 68% 38% !important;  /* horizontal, vertical */
+      }
+      
+      /* Optional: tweak on small screens */
+      @media (max-width: 520px) {
+        .photo-card img.field-photo { object-position: 65% 40% !important; }
+      }
+    /* gray boxes */
+    .box-gray{background:#ededeb;border-color:#d8d3c9}
+    .box-gray h3{margin-top:0;color:#2f2f2f}
+
+    /* 3-up grid for the research boxes */
+    .grid.cols-3 { grid-template-columns: 1fr; }
+    @media (min-width: 900px) {
+      .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* publications */
+    .pub-list{list-style:none;padding:0;margin:0}
+    .pub-item{border:1px solid var(--border);background:#fff;border-radius:var(--radius);padding:16px;margin-bottom:12px;transition:box-shadow .12s ease}
+    .pub-item:hover{box-shadow:0 4px 12px rgba(0,0,0,.06)}
+    .pub-title{font-weight:700;font-size:19px;margin:0 0 6px}
+    .pub-item a{display:inline-block}
+    .badge{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid #d6e1d6;background:#eef2ee;color:#2f3a2f;font-size:12px;margin-left:8px}
+
+    /* contact aesthetics */
+    .contact-card{background:#f2f3f1;border:1px solid var(--border)}
+    .contact-list{list-style:none;margin:0;padding:0}
+    .contact-list li{margin-bottom:10px;font-size:15px}
+    .contact-list strong{color:#2f2f2f}
+    .contact-list a{color:var(--accent);font-weight:500;border-bottom:1px solid transparent}
+    .contact-list a:hover{border-bottom-color:currentColor}
+    /* Tidy contact links; ensure nothing gets clipped */
+    .contact-list a { display: inline; padding: 0 0.5px; border-bottom: 1px solid transparent; }
+    .contact-list a:hover { border-bottom-color: currentColor; }
+/* Base, keep once (remove any duplicate above if present) */
+.photo-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Field-only crop: push focus right and slightly up */
+.photo-card img.field-photo {
+  object-position: 78% 42% !important; /* try 76–82% / 40–45% */
+}
+
+/* Optional tweak for phones */
+@media (max-width: 520px) {
+  .photo-card img.field-photo { object-position: 75% 44% !important; }
+}
+
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header id="site-header" role="banner">
+  <header>
     <div class="container">
       <nav aria-label="Primary">
-        <strong class="brand">Roee Ben-Nissan</strong>
         <ul>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#outreach">Outreach</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#focus">Research</a></li> <!-- fixed anchor -->
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="Roee_Ben_Nissan_CV.pdf" rel="noopener">CV</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="Roee_Ben_Nissan_CV.pdf" data-analytics="nav_cv_click" rel="noopener">CV</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section id="hero">
-      <div class="container">
-        <h1>Environmental biology researcher focused on climate resilience</h1>
-        <p class="sub">I design microbial systems and map biodiversity risk from sea level rise to inform conservation and sustainable food systems.</p>
-        <p class="proof">First-author in eLife. Contributions in Cell and Nature Biotechnology.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="Roee_Ben_Nissan_CV.pdf" data-analytics="cta_primary_click">Download CV</a>
-          <a class="btn outline" href="#contact" data-analytics="cta_contact_click">Contact me</a>
+  <section class="hero">
+    <div class="container">
+    <h1>Roee Ben Nissan, PhD
+    <p >Environmental Sustainability Researcher</p> </h1>     <p class="tagline">From Micro to Macro: Engineering microbial solutions and informing global climate action.</p>
+      <p class="meta">Postdoctoral Researcher — Ben-Gurion University of the Negev • Weizmann Institute of Science</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About me</h2>
+      <div class="card">
+<p>I am an environmental biology researcher tackling sustainability challenges from microbial metabolism to global ecosystems. My work spans synthetic biology, climate impact modelling, and biodiversity conservation, with projects ranging from engineering bacteria for nature-based solutions to global analyses of food systems and biodiversity.</p>
+
+<p>Beyond research, I am committed to education, outreach, and policy, working to inspire and equip the next generation of environmental stewards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photos -->
+  <section id="photos">
+    <div class="container">
+      <div class="photo-grid">
+        <figure class="photo-card">
+<img src="roee-field.jpg" class="photo field-photo"
+     style="object-position:78% 42% !important;" alt="Roee during fieldwork">
+          <figcaption>Amphibian survey in the local vernal pool</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="roee-lab.jpg" alt="Roee in the lab">
+          <figcaption>Engineering microbial systems in the lab</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="focus">
+    <div class="container">
+      <h2>Research</h2>
+      <div class="grid cols-3">
+        <div class="card box-gray">
+          <h3>Synthetic Biology and Metabolic Engineering</h3>
+          <p>Harnessing the hidden potential of microbes can transform how we produce, recycle, and sustain resources. I apply molecular biology tools, metabolic engineering, and computational modelling to design and optimize microbial systems for sustainable applications. My work focuses on creating pathways for value-added products, enhancing microbial efficiency, and enabling the use of alternative carbon sources—advancing nature-based technological solutions with real-world environmental impact. </p>
+        </div>
+        <div class="card box-gray">
+          <h3>Food Systems & Microbial Protein</h3>
+          <p>Microbial protein can be produced without fertile soil, uses fewer natural resources, and reduces pressure on land, biodiversity, and water systems. Its adaptability, high nutritional value, and potential for local production make it a promising solution for improving global food security while lowering environmental impacts. Together with the International Institute for Applied Systems Analysis (IIASA), I assess the climate mitigation potential of microbial protein as a sustainable alternative to beef and dairy production. </p>
+        </div>
+        <div class="card box-gray">
+          <h3>Biodiversity Conservation under Climate Change</h3>
+          <p>Our world is rapidly changing under the weight of the human footprint. Biodiversity is in steep decline, with species losing habitats faster than they can adapt. Using high-resolution geospatial tools, I quantify these changes by investigating how climate-driven global change will reshape the ranges and survival prospects of terrestrial vertebrates worldwide - providing science-based priorities for conservation and restoration.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="trust" aria-label="Credibility">
-      <div class="container">
-        <div class="trust-logos" role="list" aria-label="Published in">
-          <img src="images/press-cell-logo.svg" alt="Cell logo" loading="lazy" width="220" height="34">
-          <img src="images/press-elife-logo.svg" alt="eLife logo" loading="lazy" width="220" height="34">
-          <img src="images/press-natbiotech-logo.svg" alt="Nature Biotechnology logo" loading="lazy" width="220" height="34">
-        </div>
-        <p class="muted" style="margin-top:12px">
-          <span class="badge">Synthetic biology</span>
-          <span class="badge">Food systems</span>
-          <span class="badge">Biodiversity analytics</span>
-        </p>
-      </div>
-    </section>
+  <!-- Publications -->
+  <section id="publications">
+    <div class="container">
+      <h2>Selected publications</h2>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">
+              Conversion of <em>Escherichia coli</em> to generate all biomass carbon from CO₂
+            </a>
+            <span class="badge">Cell</span><span class="badge">2019</span>
+          </div>
+          <div class="muted">Shmuel Gleizer; Roee Ben-Nissan; Yinon M. Bar-On; Niv Antonovsky; Elad Noor; Yehudit Zohar; Ghil Jona; Eyal Krieger; Melina Shamshoum; Arren Bar-Even; Ron Milo.</div>
+        </li>
 
-    <section id="research" aria-labelledby="research-title">
-      <div class="container">
-        <h2 id="research-title">Research</h2>
-        <div class="grid cols-3">
-          <article class="card">
-            <h3 style="margin-top:0">Synthetic biology and metabolic engineering</h3>
-            <p>Building and testing microbial pathways that convert carbon and produce useful molecules with lower resource use. Focus on pathway design, genetic validation, and performance metrics.</p>
-          </article>
-          <article class="card">
-            <h3 style="margin-top:0">Food systems and microbial protein</h3>
-            <p>Quantifying how microbial protein can reduce land use and emissions in global diets. Work with systems models and collaborators to assess mitigation potential.</p>
-          </article>
-          <article class="card">
-            <h3 style="margin-top:0">Biodiversity under climate change</h3>
-            <p>Measuring how rising seas alter ranges of land vertebrates and prioritising protection. Emphasis on DEM alignment, exposure mapping, and scenario analysis.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+        <li class="pub-item">
+          <div class="pub-title">
+            <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank" rel="noopener">
+              Autotrophic growth of <em>Escherichia coli</em> is achieved by a small number of genetic changes
+            </a>
+            <span class="badge">eLife</span><span class="badge">2024</span>
+          </div>
+          <div class="muted">Roee Ben Nissan*; Eliya Milshtein*; Vanessa Pahl; Benoit de Pins; Ghil Jona; Dikla Levi; Hadas Yung; Noga Nir; Dolev Ezra; Shmuel Gleizer; Hannes Link; Elad Noor; Ron Milo.</div>
+        </li>
 
-    <section id="publications" aria-labelledby="pubs-title">
-      <div class="container">
-        <h2 id="pubs-title">Selected publications</h2>
-        <ul class="pub-list">
-          <li class="pub-item">
-            <p class="pub-title">
-              <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">Conversion of <em>E. coli</em> to generate all biomass carbon from CO₂</a>
-              <span class="badge">Cell</span> <span class="badge">2019</span>
-            </p>
-            <p class="muted">Shmuel Gleizer; Roee Ben-Nissan; Yinon M. Bar-On; Niv Antonovsky; Elad Noor; Yehudit Zohar; Ghil Jona; Eyal Krieger; Melina Shamshoum; Arren Bar-Even; Ron Milo.</p>
+        <li class="pub-item">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank" rel="noopener">
+              Electro-microbial production: techno-economic viability and environmental implications
+            </a>
+            <span class="badge">Nature Biotechnology</span><span class="badge">2025</span>
+          </div>
+          <div class="muted">Samuel J. Lovat; Roee Ben-Nissan; Eliya Milshtein; Asaf Tzachor; Avi Flamholz; Dorian Leger; Elad Noor; Ron Milo.</div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1525/abt.2025.87.1.20" target="_blank" rel="noopener">
+              The Importance of Sharing Current Scientific Information with Biology Teachers in Weekly Newsletters
+            </a>
+            <span class="badge">American Biology Teacher</span><span class="badge">2025</span>
+          </div>
+          <div class="muted">Merav Siani; Ohad Levkovich; Roee Ben Nissan; Awni Gabara; Moshera Alatawna; Anat Yarden.</div>
+        </li>
+      </ul>
+      <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="card contact-card">
+        <ul class="contact-list">
+          <li>
+            📧 <strong>Email:</strong>
+            <a href="mailto:roeebn@gmail.com" class="mono">roeebn@gmail.com</a> |
+            <a href="mailto:roeebenn@post.bgu.ac.il" class="mono">roeebenn@post.bgu.ac.il</a> |
+            <a href="mailto:roee.bennissan@weizmann.ac.il" class="mono">roee.bennissan@weizmann.ac.il</a>
           </li>
-          <li class="pub-item">
-            <p class="pub-title">
-              <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank" rel="noopener">Autotrophic growth of <em>E. coli</em> is achieved by a small number of genetic changes</a>
-              <span class="badge">eLife</span> <span class="badge">2024</span>
-            </p>
-            <p class="muted">Roee Ben Nissan*; Eliya Milshtein*; Vanessa Pahl; Benoit de Pins; Ghil Jona; Dikla Levi; Hadas Yung; Noga Nir; Dolev Ezra; Shmuel Gleizer; Hannes Link; Elad Noor; Ron Milo.</p>
-          </li>
-          <li class="pub-item">
-            <p class="pub-title">
-              <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank" rel="noopener">Electro-microbial production: techno-economic viability and environmental implications</a>
-              <span class="badge">Nature Biotechnology</span> <span class="badge">2025</span>
-            </p>
-            <p class="muted">Samuel J. Lovat; Roee Ben-Nissan; Eliya Milshtein; Asaf Tzachor; Avi Flamholz; Dorian Leger; Elad Noor; Ron Milo.</p>
-          </li>
+          <li>🔗 <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener" data-analytics="scholar_click">scholar profile</a></li>
+          <li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener" data-analytics="linkedin_click">linkedin profile</a></li>
+
         </ul>
-        <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="outreach" aria-labelledby="outreach-title">
-      <div class="container">
-        <h2 id="outreach-title">Outreach and teaching</h2>
-        <div class="card">
-          <ul>
-            <li>Invited talks and workshops on synthetic biology and biodiversity.</li>
-            <li>Mentoring undergraduate and graduate students.</li>
-            <li>Public engagement on climate and conservation topics.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="news" aria-labelledby="news-title">
-      <div class="container">
-        <h2 id="news-title">News</h2>
-        <ul>
-          <li>2025 — Analysis on electro-microbial production published.</li>
-          <li>2024 — eLife paper on autotrophic <em>E. coli</em>.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="about" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title">About</h2>
-        <div class="card">
-          <p>I work across scales from microbes to ecosystems to deliver quantitative answers on climate resilience. My goal is to connect mechanism with impact and support decisions in conservation and sustainable food.</p>
-          <figure style="margin:16px 0 0">
-            <img src="images/roee-portrait.jpg" alt="Portrait of Roee Ben-Nissan" loading="lazy" width="960" height="640">
-            <figcaption class="muted" style="font-size:14px;margin-top:8px">Photo placeholder. Replace with a high quality portrait.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title">Contact</h2>
-        <div class="card">
-          <ul class="contact-list">
-            <li>📧 <strong>Email:</strong> <a href="mailto:roeebn@gmail.com" class="u-email" data-analytics="email_click">roeebn@gmail.com</a></li>
-            <li>🔗 <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank" rel="noopener" data-analytics="scholar_click">scholar profile</a></li>
-            <li>💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/roee-ben-nissan-496895172" target="_blank" rel="noopener" data-analytics="linkedin_click">linkedin profile</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
+  <footer>
     <div class="container">
       <div>© 2025 Roee Ben-Nissan</div>
-      <div class="muted" style="margin-top:6px">Privacy: this site uses privacy-friendly analytics. No cookies. Aggregated events only.</div>
     </div>
   </footer>
-
-  <script defer>
-    // Minimal analytics: listens for clicks on elements with data-analytics
-    document.addEventListener('click', function(e){
-      const target = e.target.closest('[data-analytics]');
-      if(!target) return;
-      const ev = target.getAttribute('data-analytics');
-      // Replace with your endpoint if desired
-      console.log('[analytics]', ev, { ts: Date.now(), href: target.href || null });
-    });
-  </script>
 </body>
 </html>
