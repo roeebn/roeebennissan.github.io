@@ -37,6 +37,20 @@
     nav .brand{font-weight:700;letter-spacing:.2px;color:var(--accent);font-size:1.6rem;line-height:1.2}
     nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
     nav ul a{padding:6px 0}
+    .profile-pic {
+      position: absolute;
+      top: 80px;   /* adjust vertically */
+      right: 40px; /* adjust horizontally */
+    }
+    
+    .profile-pic img {
+      width: 160px;        /* size of the circle */
+      height: 160px;
+      object-fit: cover;   /* ensures nice crop */
+      border-radius: 50%;  /* makes it circular */
+      border: 3px solid #ffffff; /* optional white border */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional shadow */
+    }
 
     .hero{padding:64px 0 40px}
     .hero h1{font-size:var(--h1);letter-spacing:.2px;margin:0 0 10px;color:var(--accent)}
@@ -277,6 +291,10 @@
       <p class="hero-name">Roee Ben Nissan, PhD</p>
       <h1 class="hero-title">Environmental Sustainability Researcher</h1>
       <p class="tagline">From Micro to Macro: Engineering microbial solutions and informing global climate action.</p>
+<div class="profile-pic">
+  <img src="images/roee-portrait.jpg" alt="Roee Ben Nissan portrait">
+</div>
+
 <p class="meta">Postdoctoral Researcher —
   <a href="http://uriroll.com" target="_blank" rel="noopener">Ben-Gurion University of the Negev</a> •
   <a href="https://www.weizmann.ac.il/plants/Milo/" target="_blank" rel="noopener">Weizmann Institute of Science</a>.
