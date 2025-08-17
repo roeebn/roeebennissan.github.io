@@ -133,7 +133,21 @@
 @media (max-width: 520px) {
   .photo-card img.field-photo { object-position: 75% 44% !important; }
 }
+.hero-name {
+  font-size: 18px;       /* smaller than title */
+  font-weight: 600;
+  color: var(--muted);   /* softer, secondary color */
+  margin: 0 0 4px;       /* tight spacing below */
+}
 
+.hero-title {
+  font-size: var(--h1);  /* main headline size */
+  font-weight: 700;
+  color: var(--accent);  /* your brand accent color */
+  margin: 0 0 var(--s2);
+}
+
+  
   </style>
 </head>
 <body>
@@ -151,13 +165,15 @@
     </div>
   </header>
 
-  <section class="hero">
+  <section id="hero">
     <div class="container">
-    <h1>Roee Ben Nissan, PhD
-    <p >Environmental Sustainability Researcher</p> </h1>     <p class="tagline">From Micro to Macro: Engineering microbial solutions and informing global climate action.</p>
+      <p class="hero-name">Roee Ben Nissan, PhD</p>
+      <h1 class="hero-title">Environmental Sustainability Researcher</h1>
+      <p class="tagline">From Micro to Macro: Engineering microbial solutions and informing global climate action.</p>
       <p class="meta">Postdoctoral Researcher — Ben-Gurion University of the Negev • Weizmann Institute of Science</p>
     </div>
   </section>
+  
 
   <!-- About -->
   <section id="about">
@@ -195,7 +211,7 @@
       <div class="grid cols-3">
         <div class="card box-gray">
           <h3>Synthetic Biology and Metabolic Engineering</h3>
-          <p>Harnessing the hidden potential of microbes can transform how we produce, recycle, and sustain resources. I apply molecular biology tools, metabolic engineering, and computational modelling to design and optimize microbial systems for sustainable applications. My work focuses on creating pathways for value-added products, enhancing microbial efficiency, and enabling the use of alternative carbon sources—advancing nature-based technological solutions with real-world environmental impact. </p>
+          <p>Harnessing the hidden potential of microbes can transform how we produce, recycle, and sustain resources. I apply molecular biology tools, metabolic engineering, and computational modelling to design and optimize microbial systems for sustainable applications. My work focuses on creating pathways for value-added products, enhancing microbial efficiency, and enabling the use of alternative carbon sources - advancing nature-based technological solutions with real-world environmental impact. </p>
         </div>
         <div class="card box-gray">
           <h3>Food Systems & Microbial Protein</h3>
@@ -216,16 +232,6 @@
       <ul class="pub-list">
         <li class="pub-item">
           <div class="pub-title">
-            <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">
-              Conversion of <em>Escherichia coli</em> to generate all biomass carbon from CO₂
-            </a>
-            <span class="badge">Cell</span><span class="badge">2019</span>
-          </div>
-          <div class="muted">Shmuel Gleizer; Roee Ben-Nissan; Yinon M. Bar-On; Niv Antonovsky; Elad Noor; Yehudit Zohar; Ghil Jona; Eyal Krieger; Melina Shamshoum; Arren Bar-Even; Ron Milo.</div>
-        </li>
-
-        <li class="pub-item">
-          <div class="pub-title">
             <a href="https://doi.org/10.7554/eLife.88793.4" target="_blank" rel="noopener">
               Autotrophic growth of <em>Escherichia coli</em> is achieved by a small number of genetic changes
             </a>
@@ -233,7 +239,6 @@
           </div>
           <div class="muted">Roee Ben Nissan*; Eliya Milshtein*; Vanessa Pahl; Benoit de Pins; Ghil Jona; Dikla Levi; Hadas Yung; Noga Nir; Dolev Ezra; Shmuel Gleizer; Hannes Link; Elad Noor; Ron Milo.</div>
         </li>
-
         <li class="pub-item">
           <div class="pub-title">
             <a href="https://doi.org/10.1038/s41587-025-02632-w" target="_blank" rel="noopener">
@@ -243,8 +248,27 @@
           </div>
           <div class="muted">Samuel J. Lovat; Roee Ben-Nissan; Eliya Milshtein; Asaf Tzachor; Avi Flamholz; Dorian Leger; Elad Noor; Ron Milo.</div>
         </li>
-
         <li class="pub-item">
+          <div class="pub-title">
+            <a href="https://doi.org/10.1016/j.cell.2019.11.009" target="_blank" rel="noopener">
+              Conversion of <em>Escherichia coli</em> to generate all biomass carbon from CO₂
+            </a>
+            <span class="badge">Cell</span><span class="badge">2019</span>
+          </div>
+          <div class="muted">Shmuel Gleizer; Roee Ben-Nissan; Yinon M. Bar-On; Niv Antonovsky; Elad Noor; Yehudit Zohar; Ghil Jona; Eyal Krieger; Melina Shamshoum; Arren Bar-Even; Ron Milo.</div>
+        </li>
+        <li class="pub-item">
+          <p class="pub-title">
+            <a href="https://doi.org/10.1371/journal.pone.0327512" target="_blank" rel="noopener">
+              Demonstration of bioplastic production from CO₂ and formate using the reductive Glycine pathway in <em>E. coli</em>
+            </a>
+            <span class="badge">PLOS ONE</span> <span class="badge">2025</span>
+          </p>
+          <p class="muted">
+            Fedorova, D.; Ben-Nissan, R.; Milshtein, E.; Jona, G.; Dezorella, N.; Feiguelman, G.; Fedorov, R.; Gomaa, A.; Lindner, A. B.; Noor, E.; Milo, R.
+          </p>
+        </li>
+          <li class="pub-item">
           <div class="pub-title">
             <a href="https://doi.org/10.1525/abt.2025.87.1.20" target="_blank" rel="noopener">
               The Importance of Sharing Current Scientific Information with Biology Teachers in Weekly Newsletters
