@@ -145,15 +145,49 @@ object-position: 50% 50%;
 
 
     /* contact aesthetics */
-    .contact-card{background:#f2f3f1;border:1px solid var(--border)}
-    .contact-list{list-style:none;margin:0;padding:0}
-    .contact-list li{margin-bottom:10px;font-size:15px}
-    .contact-list strong{color:#2f2f2f}
-    .contact-list a{color:var(--accent);font-weight:500;border-bottom:1px solid transparent}
-    .contact-list a:hover{border-bottom-color:currentColor}
-    /* Tidy contact links; ensure nothing gets clipped */
-    .contact-list a { display: inline; padding: 0 0.5px; border-bottom: 1px solid transparent; }
-    .contact-list a:hover { border-bottom-color: currentColor; }
+     /* contact aesthetics */
+   .contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center; /* vertically align icon + text */
+}
+
+.contact-list .icon {
+  width: 20px;   /* slightly larger for better visibility */
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.contact-list strong {
+  color: #2f2f2f;
+  margin-right: 4px;
+}
+
+.contact-list a {
+  color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-list a:hover {
+  border-bottom-color: currentColor;
+}
+
+/* spacing around | for emails */
+.contact-list .email-sep {
+  margin: 0 6px; /* 6px space before and after */
+  color: #999;   /* lighter so it’s a divider, not text */
+}
+
 /* Base, keep once (remove any duplicate above if present) */
 .photo-card img {
   width: 100%;
