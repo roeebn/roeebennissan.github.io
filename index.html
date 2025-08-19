@@ -187,6 +187,17 @@ object-position: 50% 50%;
   margin: 0 6px; /* 6px space before and after */
   color: #999;   /* lighter so it’s a divider, not text */
 }
+/* Make long emails wrap nicely on small screens */
+.contact-list .email {
+  overflow-wrap: anywhere;   /* modern, best */
+  word-break: break-word;    /* fallback */
+}
+
+/* On very small screens, stack emails instead of using pipes */
+@media (max-width: 520px){
+  .contact-list .email { display: block; margin: 4px 0; }
+  .contact-list .email-sep { display: none; }
+}
 
 /* Base, keep once (remove any duplicate above if present) */
 .photo-card img {
@@ -472,14 +483,15 @@ object-position: 50% 50%;
       <div class="card contact-card">
       <ul class="contact-list">
   <li>
-   <img src="envelope.png" alt="Email" class="icon">
-    <strong>Email:</strong>
-    <a href="mailto:roeebn@gmail.com">roeebn@gmail.com</a>
-    <span class="email-sep">|</span>
-    <a href="mailto:roeebn@post.bgu.ac.il">roeebn@post.bgu.ac.il</a>
-    <span class="email-sep">|</span>
-    <a href="mailto:roee.bennissan@weizmann.ac.il">roee.bennissan@weizmann.ac.il</a>
-  </li>
+  <img src="envelope.png" alt="Email" class="icon">
+  <strong>Email:</strong>
+  <a class="email" href="mailto:roeebn@gmail.com">roeebn@gmail.com</a>
+  <span class="email-sep">|</span>
+  <a class="email" href="mailto:roeebn@post.bgu.ac.il">roeebn@post.bgu.ac.il</a>
+  <span class="email-sep">|</span>
+  <a class="email" href="mailto:roee.bennissan@weizmann.ac.il">roee.bennissan@weizmann.ac.il</a>
+</li>
+
   <li>
     <img src="googlescholar.png" alt="Google Scholar" class="icon">
     <a href="https://scholar.google.com/citations?user=_VWn8hcAAAAJ&hl=en" target="_blank">Google Scholar profile</a>
